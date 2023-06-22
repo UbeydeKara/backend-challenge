@@ -42,8 +42,8 @@ public class OrderServiceImpl implements OrderService {
     @Override
     public Order update(Order order) {
         Order newOrder = orderRepository.saveAndFlush(order);
-        order.setCustomer(customerClient.getById(order.getCustomerId()));
-        order.setCreateDate(LocalDateTime.now());
+        newOrder.setCustomer(customerClient.getById(order.getCustomerId()));
+        newOrder.setCreateDate(LocalDateTime.now());
         return newOrder;
     }
 
