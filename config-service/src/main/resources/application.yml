@@ -1,0 +1,24 @@
+spring:
+  application:
+    name: config-service
+
+  profiles:
+    active: native
+
+# vault kullanmamız gerekirse
+#
+#  profiles:
+#    active: native, vault
+#  cloud:
+#    vault:
+#      host: 127.0.0.1
+#      port: 8200
+#      scheme: http
+#      authentication: TOKEN
+#      token: <root-token-here>
+#      kv:
+#        default-context: secret/config-service
+#  config.import: vault://
+
+server:
+  port: 8888
